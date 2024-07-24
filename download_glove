@@ -1,0 +1,13 @@
+#!/usr/bin/env zsh
+
+# Download GloVe
+curl -L "http://nlp.stanford.edu/data/glove.6B.zip" -o "glove.6B.zip"
+
+# Unzip the GloVe zip file
+unzip glove.6B.zip -d glove.6B
+
+# Remove the GloVe zip file
+rm glove.6B.zip
+
+# Add glove to .gitignore
+echo "glove.6B/*" >> .gitignore
